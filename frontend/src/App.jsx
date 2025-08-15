@@ -9,7 +9,7 @@ export default function App() {
   const [metrics, setMetrics] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/companies")
+    fetch("https://stock-market-dashboard-backend.onrender.com/api/companies")
       .then(res => res.json())
       .then(data => setCompanies(data.companies))
       .catch(err => console.error(err));
@@ -18,7 +18,8 @@ export default function App() {
   useEffect(() => {
     if (!selectedCompany) return;
 
-    fetch(`http://localhost:5000/api/stock/${selectedCompany._id}`)
+    fetch(`https://stock-market-dashboard-backend.onrender.com
+/api/stock/${selectedCompany._id}`)
       .then(res => res.json())
       .then(data => {
         setMetrics(data.metrics);
@@ -42,3 +43,6 @@ export default function App() {
     </div>
   );
 }
+
+
+// https://stock-market-dashboard-frontend.onrender.com
