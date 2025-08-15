@@ -1,19 +1,17 @@
-export default function Sidebar({ companies, selected, onSelect }) {
+export default function Sidebar({ companies, selectedCompany, onSelect }) {
     return (
-        <div className="w-64 bg-white shadow-lg overflow-y-auto">
-            <h2 className="text-lg font-bold p-4 border-b">Companies</h2>
-            <ul>
-                {companies.map((company) => ( 
-                    <li
-                        key={company.symbol}
-                        onClick={() => onSelect(company)}
-                        className={`p-4 cursor-pointer hover:bg-gray-100 ${selected.symbol === company.symbol ? "bg-gray-200 font-semibold" : ""
-                            }`}
-                    >
-                        {company.name}
-                    </li>
-                ))}
-            </ul>
+        <div className="w-1/4 bg-gray-900 text-white p-4 overflow-y-auto">
+            <h2 className="text-lg font-bold mb-4">Companies</h2>
+            {companies.map((c) => (
+                <button
+                    key={c._id}
+                    onClick={() => onSelect(c)}
+                    className={`block w-full text-left px-3 py-2 rounded mb-2 ${selectedCompany?._id === c._id ? "bg-blue-600" : "bg-gray-700"
+                        }`}
+                >
+                    {c.name}
+                </button>
+            ))}
         </div>
     );
 }

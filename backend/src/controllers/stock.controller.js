@@ -31,7 +31,6 @@ export const getStockDataByCompany = async (req, res) => {
         const oneYearAgo = new Date();
         oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
 
-        // Fetch stock data for the company within the last year
         const data = await StockData.find({ companyId, date: { $gte: oneYearAgo } }).sort({ date: 1 });
 
         if (!data.length) {
@@ -42,7 +41,7 @@ export const getStockDataByCompany = async (req, res) => {
         const high52 = Math.max(...data.map(d => d.high));
         const low52 = Math.min(...data.map(d => d.low));
 
-        // Average Volume (last 30 days)
+        // Average (last 30 days)
         const last30 = data.slice(0, 30);
         const avgVolume = last30.reduce((sum, d) => sum + d.volume, 0) / last30.length;
 
