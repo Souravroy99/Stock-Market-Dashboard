@@ -1,3 +1,5 @@
+# Live: https://stock-market-dashboard-frontend.onrender.com/
+
 # 📈 Stock Market Dashboard
 
 A full-stack web application to visualize real-time and historical stock market data for multiple companies.
