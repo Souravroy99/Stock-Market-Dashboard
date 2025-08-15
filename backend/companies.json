@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Apple Inc.",
+    "ticker": "AAPL",
+    "sector": "Technology",
+    "logoUrl": "https://logo.clearbit.com/apple.com"
+  },
+  {
+    "name": "Microsoft Corporation",
+    "ticker": "MSFT",
+    "sector": "Technology",
+    "logoUrl": "https://logo.clearbit.com/microsoft.com"
+  },
+  {
+    "name": "Tesla Inc.",
+    "ticker": "TSLA",
+    "sector": "Automotive",
+    "logoUrl": "https://logo.clearbit.com/tesla.com"
+  },
+  {
+    "name": "Amazon.com Inc.",
+    "ticker": "AMZN",
+    "sector": "E-Commerce",
+    "logoUrl": "https://logo.clearbit.com/amazon.com"
+  },
+  {
+    "name": "Alphabet Inc.",
+    "ticker": "GOOGL",
+    "sector": "Technology",
+    "logoUrl": "https://logo.clearbit.com/abc.xyz"
+  },
+  {
+    "name": "NVIDIA Corporation",
+    "ticker": "NVDA",
+    "sector": "Semiconductors",
+    "logoUrl": "https://logo.clearbit.com/nvidia.com"
+  },
+  {
+    "name": "Meta Platforms Inc.",
+    "ticker": "META",
+    "sector": "Social Media",
+    "logoUrl": "https://logo.clearbit.com/meta.com"
+  },
+  {
+    "name": "Walmart Inc.",
+    "ticker": "WMT",
+    "sector": "Retail",
+    "logoUrl": "https://logo.clearbit.com/walmart.com"
+  },
+  {
+    "name": "Netflix Inc.",
+    "ticker": "NFLX",
+    "sector": "Entertainment",
+    "logoUrl": "https://logo.clearbit.com/netflix.com"
+  },
+  {
+    "name": "JPMorgan Chase & Co.",
+    "ticker": "JPM",
+    "sector": "Finance",
+    "logoUrl": "https://logo.clearbit.com/jpmorganchase.com"
+  }
+]

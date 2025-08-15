@@ -3,7 +3,7 @@ export default function Sidebar({ companies, selected, onSelect }) {
         <div className="w-64 bg-white shadow-lg overflow-y-auto">
             <h2 className="text-lg font-bold p-4 border-b">Companies</h2>
             <ul>
-                {companies.map((company) => (
+                {companies.map((company) => ( 
                     <li
                         key={company.symbol}
                         onClick={() => onSelect(company)}

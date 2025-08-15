@@ -17,12 +17,12 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend 
 );
 
 export default function StockChart({ symbol }) {
     // Sample data (randomized for demo)
-    const labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    const labels = ["Mon", "Tue", "Wed", "Thu", "Fri"];
     const data = labels.map(() => Math.floor(Math.random() * 200) + 100);
 
     const chartData = {

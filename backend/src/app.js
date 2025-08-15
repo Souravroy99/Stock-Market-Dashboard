@@ -18,6 +18,6 @@ app.use(express.json())
 app.use(cors(corsOptions))
 
 app.use("/api", companyRouter)
-// app.use("/api", stockRouter)
+app.use("/api", stockRouter)
 
 export default app ;

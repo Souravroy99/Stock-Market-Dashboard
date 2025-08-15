@@ -8,7 +8,7 @@ export const createStockData = async (req, res) => {
         const companyExists = await Company.findById(companyId);
         if (!companyExists) {
             return res.status(400).json({ message: "Company not found!" });
-        } 
+        }
 
         const newStockData = await StockData.create({
             companyId, date, open, high, low, close, volume
@@ -18,7 +18,7 @@ export const createStockData = async (req, res) => {
             message: "Stock data added successfully",
             stockData: newStockData
         });
-    } 
+    }
     catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -32,7 +32,7 @@ export const getStockDataByCompany = async (req, res) => {
         oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
 
         // Fetch stock data for the company within the last year
-        const data = await StockData.find({companyId, date: { $gte: oneYearAgo }}).sort({ date: -1 });
+        const data = await StockData.find({ companyId, date: { $gte: oneYearAgo } }).sort({ date: 1 });
 
         if (!data.length) {
             return res.status(404).json({ message: "No stock data found" });
@@ -51,14 +51,16 @@ export const getStockDataByCompany = async (req, res) => {
         const sma20 = last20.reduce((sum, d) => sum + d.close, 0) / last20.length;
 
         return res.status(200).json({
-            message: "Metrics fetched successfully",
+            message: "Metrics and data fetched successfully",
             metrics: {
                 "52WeekHigh": high52,
                 "52WeekLow": low52,
                 averageVolume30Days: avgVolume,
                 SMA20: sma20
-            }
+            },
+            data
         });
+
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

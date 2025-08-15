@@ -7,7 +7,7 @@ const companySchema = new mongoose.Schema(
             trim: true,
             required: true 
         },  
-        ticker: { 
+        ticker: {  
             type: String, 
             uppercase: true, 
             trim: true,
