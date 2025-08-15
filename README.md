@@ -26,10 +26,9 @@ Built with **React**, **Chart.js**, **Node.js**, **Express**, and **MongoDB**.
   * Get all companies
   * Get company by ID
   * Get historical stock data for a company
-  * Get latest stock metrics
+   
 * Uses **Axios** or `node-fetch` to retrieve live stock data from APIs (e.g., Alpha Vantage, Yahoo Finance)
 * Data validation with **Mongoose schemas**
-* Error handling middleware
 
 ### **Database**
 
