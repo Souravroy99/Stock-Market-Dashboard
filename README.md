@@ -29,7 +29,7 @@ Built with **React**, **Chart.js**, **Node.js**, **Express**, and **MongoDB**.
   * Get company by ID
   * Get historical stock data for a company
    
-* Uses **Axios** or `node-fetch` to retrieve live stock data from APIs (e.g., Alpha Vantage, Yahoo Finance)
+* Uses **Axios** to retrieve stock data from database(MongoDB)
 * Data validation with **Mongoose schemas**
 
 ### **Database**
@@ -37,7 +37,7 @@ Built with **React**, **Chart.js**, **Node.js**, **Express**, and **MongoDB**.
 * **MongoDB** for storing:
 
   * Company details (`name`, `ticker`, `sector`, `logoUrl`)
-  * Historical stock data (date, open, high, low, close, volume)
+  * Stock data (`date`, `open`, `high`, `low`, `close`, `volume`)
 * Indexed fields for faster queries
 
 ---
@@ -100,7 +100,7 @@ npm install
 
 ```env
 PORT=5000
-MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/stocks
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/stocks
 CORS_ORIGIN=*
 ```
 
@@ -144,8 +144,8 @@ Visit: **[http://localhost:5173](http://localhost:5173)**
 ## 🛠 Tech Stack
 
 **Frontend:** React, Tailwind CSS, Chart.js
-**Backend:** Node.js, Express, Axios
-**Database:** MongoDB, Mongoose
+**Backend:** Node.js, Express.js
+**Database:** MongoDB
 
 ---
 
