@@ -6,4 +6,4 @@ router.route("/companies").get(getCompanies)
 router.route("/company/:id").get(getCompanyById) 
 router.route("/company").post(createCompany)
 
-export default router 
+export default router

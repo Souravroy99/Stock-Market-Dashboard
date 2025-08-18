@@ -45,26 +45,33 @@ Built with **React**, **Chart.js**, **Node.js**, **Express**, and **MongoDB**.
 ```
 📦 stock-dashboard
  ┣ 📂 backend
+ ┃ ┣ 📂 config
+ ┃ ┃ ┗ db.js
+ ┃ ┃ 
  ┃ ┣ 📂 controllers
  ┃ ┃ ┣ company.controller.js
- ┃ ┃ ┣ stock.controller.js
+ ┃ ┃ ┗ stock.controller.js
+ ┃ ┃ 
  ┃ ┣ 📂 models
- ┃ ┃ ┣ Company.js
- ┃ ┃ ┣ StockData.js
+ ┃ ┃ ┣ company.model.js
+ ┃ ┃ ┗ stock.model.js
+ ┃ ┃ 
  ┃ ┣ 📂 routes
- ┃ ┃ ┣ company.routes.js
- ┃ ┃ ┣ stock.routes.js
+ ┃ ┃ ┣ company.route.js
+ ┃ ┃ ┗ stock.route.js
+ ┃ ┃ 
  ┃ ┣ app.js
  ┃ ┣ index.js
  ┃ ┗ .env
+ ┃ 
  ┣ 📂 frontend
- ┃ ┣ 📂 src
- ┃ ┃ ┣ components
- ┃ ┃ ┃ ┣ Sidebar.jsx
- ┃ ┃ ┃ ┣ StockChart.jsx
- ┃ ┃ ┣ App.jsx
- ┃ ┃ ┣ main.jsx
- ┃ ┗ tailwind.config.js
+ ┃ ┗ 📂 src
+ ┃   ┣ components
+ ┃   ┃ ┣ Sidebar.jsx
+ ┃   ┃ ┣ StockChart.jsx
+ ┃   ┣ App.jsx
+ ┃   ┗ main.jsx
+ ┃
  ┗ README.md
 
 ```
@@ -76,7 +83,7 @@ Built with **React**, **Chart.js**, **Node.js**, **Express**, and **MongoDB**.
 ### **1️⃣ Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/stock-dashboard.git
+git clone https://github.com/Souravroy99/stock-dashboard.git
 cd stock-dashboard
 ```
 
