@@ -39,7 +39,7 @@ export const getStockDataByCompany = async (req, res) => {
 
         // 52-week high/low
         const high52 = Math.max(...data.map(d => d.high));
-        const low52 = Math.max(...data.map(d => d.low));
+        const low52 = Math.min(...data.map(d => d.low));
 
         // Average (last 30 days)
         const last30 = data.slice(-30);
