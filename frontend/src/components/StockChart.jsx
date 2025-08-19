@@ -14,7 +14,7 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip,
 export default function StockChart({ company, metrics, stockData }) {
     // Show center message if no company is selected
     if (!company) {
-        return (
+        return ( 
             <div className="flex items-center justify-center w-full h-full text-center">
                 <p className="text-gray-500 font-bold text-3xl">
                     Select a company to view data

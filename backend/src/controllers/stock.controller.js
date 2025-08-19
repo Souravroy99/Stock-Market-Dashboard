@@ -39,13 +39,12 @@ export const getStockDataByCompany = async (req, res) => {
 
         // 52-week high/low
         const high52 = Math.max(...data.map(d => d.high));
-        const low52 = Math.min(...data.map(d => d.low));
+        const low52 = Math.max(...data.map(d => d.low));
 
         // Average (last 30 days)
         const last30 = data.slice(-30);
         const avgVolume = last30.reduce((sum, d) => sum + d.volume, 0) / last30.length;
 
-        // console.log(last30, " <--- ") ;
 
         // Simple Moving Average (SMA) - 20 days
         const last20 = data.slice(-20);

@@ -28,6 +28,7 @@ export default function App() {
       .catch(err => console.error(err));
   }, [selectedCompany]);
 
+
   return (
     <div className="flex h-screen">
       <Sidebar
@@ -35,6 +36,7 @@ export default function App() {
         selectedCompany={selectedCompany}
         onSelect={setSelectedCompany}
       />
+      
       <StockChart
         company={selectedCompany}
         metrics={metrics}
