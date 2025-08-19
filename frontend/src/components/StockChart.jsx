@@ -8,13 +8,14 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
+import MetricCard from "./MetricCard";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 export default function StockChart({ company, metrics, stockData }) {
     // Show center message if no company is selected
     if (!company) {
-        return ( 
+        return (
             <div className="flex items-center justify-center w-full h-full text-center">
                 <p className="text-gray-500 font-bold text-3xl">
                     Select a company to view data
@@ -66,19 +67,6 @@ export default function StockChart({ company, metrics, stockData }) {
                     <p className="text-gray-500">Loading chart...</p>
                 )}
             </div>
-        </div>
-    );
-}
-
-function MetricCard({ title, value }) {
-    return (
-        <div className="bg-white rounded-lg shadow p-4 text-center">
-            <h4 className="text-sm text-gray-500">{title}</h4>
-            <p className="text-lg font-semibold">
-                {value !== undefined && value !== null
-                    ? Number(value).toFixed(2)
-                    : "—"}
-            </p>
         </div>
     );
 }
