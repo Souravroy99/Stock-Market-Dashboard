@@ -1,5 +1,5 @@
 import { Company } from "../models/company.model.js";
-import { StockData } from "../models/stockData.model.js";
+import { StockData } from "../models/stock.model.js";
 
 export const createStockData = async (req, res) => {
     try {

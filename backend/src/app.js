@@ -3,7 +3,7 @@ dotenv.config()
 import express from "express"
 import cors from "cors"
 import companyRouter from "./routes/company.route.js"
-import stockRouter from "./routes/stocks.route.js"
+import stockRouter from "./routes/stock.route.js"
 
 const app = express()
 
