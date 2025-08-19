@@ -9,10 +9,8 @@ const app = express()
 
 const corsOptions = {
     origin: process.env.CORS_ORIGIN,
-    // credentials: true
-} 
-
-console.log(process.env.CORS_ORIGIN, 11233);
+    credentials: true
+}
 
 app.use(express.json())
 app.use(cors(corsOptions))

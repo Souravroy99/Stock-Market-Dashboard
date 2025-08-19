@@ -11,11 +11,11 @@ const stockDataSchema = new mongoose.Schema(
             type: Date, 
             required: true 
         },
-        open: Number,
+        open: Number,  // Opening price
         high: Number,
         low: Number,
         close: Number,
-        volume: Number
+        volume: Number  // Number of shares traded
     }, 
     { 
         timestamps: true

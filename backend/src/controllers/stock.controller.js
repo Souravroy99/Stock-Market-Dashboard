@@ -42,11 +42,13 @@ export const getStockDataByCompany = async (req, res) => {
         const low52 = Math.min(...data.map(d => d.low));
 
         // Average (last 30 days)
-        const last30 = data.slice(0, 30);
+        const last30 = data.slice(-30);
         const avgVolume = last30.reduce((sum, d) => sum + d.volume, 0) / last30.length;
 
+        // console.log(last30, " <--- ") ;
+
         // Simple Moving Average (SMA) - 20 days
-        const last20 = data.slice(0, 20);
+        const last20 = data.slice(-20);
         const sma20 = last20.reduce((sum, d) => sum + d.close, 0) / last20.length;
 
         return res.status(200).json({

@@ -1,5 +1,5 @@
 import { Company } from "../models/company.model.js"
-
+ 
 export const getCompanies = async(req, res) => {
     try {
         // If we just need to read data then 'lean()' is faster

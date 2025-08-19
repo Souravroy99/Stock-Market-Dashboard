@@ -3,6 +3,6 @@ import { createStockData, getStockDataByCompany } from "../controllers/stock.con
 const router = express.Router()
 
 router.route("/stock/:companyId").get(getStockDataByCompany)
-router.route("/stock").post(createStockData)
+router.route("/stock/:companyId").post(createStockData)
 
-export default router 
+export default router
