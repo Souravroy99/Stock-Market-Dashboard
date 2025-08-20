@@ -38,7 +38,6 @@ Built with **React**, **Chart.js**, **Node.js**, **Express**, and **MongoDB**.
 
   * Company details (`name`, `ticker`, `sector`, `logoUrl`)
   * Stock data (`date`, `open`, `high`, `low`, `close`, `volume`)
-* Indexed fields for faster queries
 
 ---
 

@@ -9,8 +9,7 @@ export default function Sidebar({ companies, selectedCompany, onSelect }) {
                     
                     onClick={() => onSelect(company)}
 
-                    className={`block w-full text-left px-3 py-2 rounded mb-2 ${selectedCompany?._id === company._id ? "bg-blue-600" : "bg-gray-700"
-                        }`}
+                    className={`block w-full text-left px-3 py-2 rounded mb-2 ${selectedCompany?._id === company._id ? "bg-blue-600" : "bg-gray-700"}`}
                 >
                     {company.name}
                 </button>

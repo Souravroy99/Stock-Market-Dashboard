@@ -18,8 +18,7 @@ export default function App() {
   useEffect(() => {
     if (!selectedCompany) return;
 
-    fetch(`https://stock-market-dashboard-backend.onrender.com
-/api/stock/${selectedCompany._id}`)
+    fetch(`https://stock-market-dashboard-backend.onrender.com/api/stock/${selectedCompany._id}`)
       .then(res => res.json())
       .then(data => {
         setMetrics(data.metrics);
@@ -36,7 +35,7 @@ export default function App() {
         selectedCompany={selectedCompany}
         onSelect={setSelectedCompany}
       />
-      
+
       <StockChart
         company={selectedCompany}
         metrics={metrics}

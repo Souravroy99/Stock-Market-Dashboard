@@ -10,7 +10,7 @@ export const getCompanies = async(req, res) => {
     catch (error) {
         res.status(500).json({ message: error.message });
     }
-} 
+}
 
 export const getCompanyById = async(req, res) => {
     try {
@@ -32,7 +32,7 @@ export const createCompany = async(req, res) => {
         const existing = await Company.findOne({ticker})
         if(existing) return res.status(400).json({message: "Company already exists"})
 
-        const newCompany = await Company.create({name, ticker, sector, logoUrl})
+        const newCompany = await Company.create({name, ticker, sector, logoUrl}).select("-logoUrl -_id -sector")
         
         return res.status(201).json({
             message: "Company created successfully",

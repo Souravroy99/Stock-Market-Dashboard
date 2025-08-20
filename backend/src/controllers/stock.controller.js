@@ -3,7 +3,8 @@ import { StockData } from "../models/stock.model.js";
 
 export const createStockData = async (req, res) => {
     try {
-        const { companyId, date, open, high, low, close, volume } = req.body;
+        const { date, open, high, low, close, volume } = req.body;
+        const { companyId } = req.params
 
         const companyExists = await Company.findById(companyId);
         if (!companyExists) {
@@ -48,7 +49,7 @@ export const getStockDataByCompany = async (req, res) => {
 
         // Simple Moving Average (SMA) - 20 days
         const last20 = data.slice(-20);
-        const sma20 = last20.reduce((sum, d) => sum + d.close, 0) / last20.length;
+        const sma20 = last20.reduce((sum, d) => sum + d.close, 0) / last20.length ;
 
         return res.status(200).json({
             message: "Metrics and data fetched successfully",

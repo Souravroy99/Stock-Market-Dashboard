@@ -20,6 +20,6 @@ const stockDataSchema = new mongoose.Schema(
     { 
         timestamps: true
     }
-);
+); 
  
 export const StockData = mongoose.model("StockData", stockDataSchema);

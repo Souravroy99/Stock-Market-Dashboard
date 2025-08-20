@@ -10,7 +10,7 @@ connectDB()
     app.listen(PORT, () => {
         console.log(`Server is listening at port: ${PORT}`);
     }) 
-})  
+})
 .catch((err) => {
     console.log(`MongoDB Connection Error!: ${err}`);
 })
