@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import StockChart from "./components/StockChart";
-
+ 
 export default function App() {
   const [companies, setCompanies] = useState([]);
   const [selectedCompany, setSelectedCompany] = useState(null);
@@ -14,7 +14,7 @@ export default function App() {
       .then(data => setCompanies(data.companies))
       .catch(err => console.error(err));
   }, []);
-
+ 
   useEffect(() => {
     if (!selectedCompany) return;
 
@@ -31,7 +31,7 @@ export default function App() {
   return (
     <div className="flex h-screen">
       <Sidebar
-        companies={companies}
+        companies={companies} 
         selectedCompany={selectedCompany}
         onSelect={setSelectedCompany}
       />

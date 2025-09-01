@@ -4,8 +4,7 @@ export default function Sidebar({ companies, selectedCompany, onSelect }) {
             <h2 className="text-lg font-bold mb-4">Companies</h2>
             
             {companies.map((company) => (
-                <button 
-                    key={company._id}
+                <button key={company._id}
                     
                     onClick={() => onSelect(company)}
 

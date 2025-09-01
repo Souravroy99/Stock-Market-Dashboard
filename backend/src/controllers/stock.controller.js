@@ -34,7 +34,7 @@ export const getStockDataByCompany = async (req, res) => {
 
         const data = await StockData.find({ companyId, date: { $gte: oneYearAgo } }).sort({ date: 1 });
 
-        if (!data.length) {
+        if (data.length === 0) {
             return res.status(404).json({ message: "No stock data found" });
         }
 

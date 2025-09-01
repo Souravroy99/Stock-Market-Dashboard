@@ -6,7 +6,7 @@ const companySchema = new mongoose.Schema(
             type: String, 
             trim: true,
             required: true 
-        },  
+        },   
         ticker: {  
             type: String, 
             uppercase: true, 
@@ -16,7 +16,7 @@ const companySchema = new mongoose.Schema(
         },
         sector: String,
         logoUrl: String
-    }, 
+    },
     {
         timestamps: true
     }

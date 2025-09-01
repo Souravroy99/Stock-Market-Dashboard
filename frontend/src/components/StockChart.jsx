@@ -5,7 +5,7 @@ import {
     LinearScale,
     PointElement,
     LineElement,
-    Tooltip,
+    Tooltip, 
     Legend,
 } from "chart.js";
 import MetricCard from "./MetricCard";
@@ -37,12 +37,12 @@ export default function StockChart({ company, metrics, stockData }) {
             },
         ],
     };
-
-    return (
+      
+    return (          
         <div className="flex-1 flex flex-col p-6">
             <div className="flex items-center gap-4 mb-4">
                 <img
-                    src={company.logoUrl}
+                    src={company.logoUrl} 
                     alt={`${company.name} logo`}
                     className="w-12 h-12 object-contain"
                 />
